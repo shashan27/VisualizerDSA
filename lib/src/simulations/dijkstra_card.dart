@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
-  runApp(new BacktrackingHome());
+  runApp(new DijkstraHome());
 }
 
-class BacktrackingHome extends StatelessWidget {
+class DijkstraHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -17,7 +17,7 @@ class BacktrackingHome extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new ElevatedButton(
-                    child: Text('Sudoku Homepage'),
+                    child: Text('Shortest Path Homepage'),
                     style: ElevatedButton.styleFrom(
                         primary: Colors.purple,
                         padding:
@@ -46,7 +46,7 @@ class BacktrackingHome extends StatelessWidget {
 }
 
 _launchURL() async {
-  const url = 'https://shashan27.github.io/sudoku/#/';
+  const url = 'https://shashan27.github.io/dijkstra/#/';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -55,7 +55,7 @@ _launchURL() async {
 }
 
 __launchURL() async {
-  const url = 'https://github.com/shashan27/sudokuFlutter';
+  const url = 'https://github.com/shashan27/dijkstraFlutter';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

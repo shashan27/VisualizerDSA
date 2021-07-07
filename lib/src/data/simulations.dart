@@ -4,6 +4,7 @@ import 'package:visualizer/src/data/themedata.dart';
 import 'package:visualizer/src/simulations/FresherApp_card.dart';
 import 'package:visualizer/src/simulations/backtracking_card.dart';
 import 'package:visualizer/src/simulations/bubble_sort.dart';
+import 'package:visualizer/src/simulations/dijkstra_card.dart';
 import 'package:visualizer/src/simulations/selection_sort.dart';
 import 'package:visualizer/src/simulations/toothpick.dart';
 import 'package:visualizer/src/simulations/insertion_sort.dart';
@@ -11,8 +12,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Simulations with ChangeNotifier {
   static var _favorites = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
-  final _algorithm = [0, 1, 2, 4];
-  final _others = [5, 3];
+  final _algorithm = [0, 1, 2, 4, 5];
+  final _others = [6, 3];
   var prefs;
   final _searchTags = {
     0: "bubble sort algorithm sorting bars ",
@@ -20,7 +21,8 @@ class Simulations with ChangeNotifier {
     2: "selection sort algorithm sorting bars ",
     3: "toothpick pattern algorithm sequence ",
     4: "backtracking sudoku ",
-    5: "freshers' app ",
+    5: "dijkstra algorithm shortest path",
+    6: "freshers' app ",
   };
 
   Simulations() {
@@ -95,6 +97,16 @@ class Simulations with ChangeNotifier {
       ),
       SimulationCard(
         id: 5,
+        simulationName: "Dijkstra's",
+        image: theme.darkTheme
+            ? 'assets/simulations/Dijkstra_Dark.png'
+            : 'assets/simulations/Dijkstra_Light.png',
+        direct: DijkstraHome(),
+        infoLink: 'https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm',
+        fav: _favorites[4],
+      ),
+      SimulationCard(
+        id: 6,
         simulationName: "Freshers' App",
         image: theme.darkTheme
             ? 'assets/simulations/Freshers_iconLight.png'
