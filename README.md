@@ -1,4 +1,4 @@
 # Visualizer
 
-DSA Project and others.
-
+- Helps to visulaize some algorithms
+- Also contains all the projects at one place
