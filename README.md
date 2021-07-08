@@ -1,4 +1,4 @@
 # Visualizer
 
-- Helps to visulaize some algorithms
-- Also contains all the projects at one place
+- Helps to visulaize Sorting algorithms
+- Also contains other algotithms and projects at one place
